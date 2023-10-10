@@ -19,7 +19,7 @@
                 </strong>
                 <% if(app.status === "online"){ %>
                   <span class="badge bg-green-lt"><%= app.status %></span>
-                <% } else{ %>  
+                <% } else{ %>
                   <span class="badge bg-red-lt"><%= app.status %></span>
                 <% } %>
               </div>
@@ -44,7 +44,7 @@
                   <path d="M15 12v-2"></path>
                   <path d="M12 12v-1"></path>
                 </svg>
-                Memory : <%= app.memory %></h4>
+                内存占用 : <%= app.memory %></h4>
               <h4 class="text-secondary">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -55,7 +55,7 @@
                   <path d="M3 11h16"></path>
                   <path d="M18 16.496v1.504l1 1"></path>
                 </svg>
-                Uptime : <%= app.uptime %></h4>
+                运行时间 : <%= app.uptime %></h4>
             </div>
           </a>
           <div class="card-footer text-center">
@@ -66,7 +66,7 @@
                   <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"></path>
                   <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
                </svg>
-               Reload
+               重载
               </button>
               <button class="btn btn-sm btn-cyan" aria-label="Button" onclick="pm2AppAction('<%= app.name %>', 'restart')">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rotate-clockwise-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -78,7 +78,7 @@
                   <line x1="7.16" y1="18.37" x2="7.16" y2="18.38"></line>
                   <line x1="11" y1="19.94" x2="11" y2="19.95"></line>
                </svg>
-               Restart
+               重启
               </button>
               <button class="btn btn-sm btn-danger" aria-label="Button" onclick="pm2AppAction('<%= app.name %>', 'stop')">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-minus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -86,9 +86,9 @@
                   <circle cx="12" cy="12" r="9"></circle>
                   <line x1="9" y1="12" x2="15" y2="12"></line>
                </svg>
-               Stop
+               停止
               </button>
-            <% } else{ %> 
+            <% } else{ %>
               <button class="btn btn-sm btn-cyan" aria-label="Button" onclick="pm2AppAction('<%= app.name %>', 'restart')">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rotate-clockwise-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -99,7 +99,7 @@
                   <line x1="7.16" y1="18.37" x2="7.16" y2="18.38"></line>
                   <line x1="11" y1="19.94" x2="11" y2="19.95"></line>
                </svg>
-               Restart
+               重启
               </button>
             <% } %>
           </div>
