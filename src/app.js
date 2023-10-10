@@ -12,11 +12,6 @@ const Koa = require('koa');
 
 // Init Application
 
-if(!config.APP_USERNAME || !config.APP_PASSWORD){
-    console.log("You must first setup admin user. Run command -> npm run setup-admin-user")
-    process.exit(2)
-}
-
 if(!config.APP_SESSION_SECRET){
     const randomString = generateRandomString()
     setEnvDataSync(config.APP_DIR, { APP_SESSION_SECRET: randomString})
